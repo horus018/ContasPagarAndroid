@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".EditarContaActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Campo para editar o nome da categoria -->
+        <EditText
+            android:id="@+id/editTextNomeCategoria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nome da categoria" />
+
+        <!-- Botão para alterar o nome da categoria -->
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar" />
+
+    </LinearLayout>
+
+    <!-- Texto 'Despesa:' -->
+    <TextView
+        android:id="@+id/textViewDespesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Despesa:" />
+
+    <!-- Campo para digitar despesa -->
+    <EditText
+        android:id="@+id/editTextDespesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: despesas da casa" />
+
+    <!-- Texto 'Valor:' -->
+    <TextView
+        android:id="@+id/textViewValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor:" />
+
+    <!-- Campo para digitar valor -->
+    <EditText
+        android:id="@+id/editTextValor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="R$"
+        android:inputType="numberDecimal" />
+
+    <!-- Texto 'Vencimento:' -->
+    <TextView
+        android:id="@+id/textViewVencimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vencimento:" />
+
+    <!-- Campo para digitar vencimento -->
+    <EditText
+        android:id="@+id/editTextVencimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="00/00/0000"
+        android:padding="8dp" />
+
+    <!-- Botão 'Ok' -->
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Ok" />
+
+    <ListView
+        android:id="@+id/listViewDespesas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

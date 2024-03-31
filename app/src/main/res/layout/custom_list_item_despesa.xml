@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    tools:ignore="ExtraText">
+
+    <!-- Ícone da despesa (opcional) -->
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingEnd="8dp"
+        android:src="@drawable/ic_despesa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/containerTexts"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- Container para os detalhes da despesa -->
+    <LinearLayout
+        android:id="@+id/containerTexts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewIcon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Descrição da despesa -->
+        <TextView
+            android:id="@+id/textViewNomeDespesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Valor da despesa -->
+        <TextView
+            android:id="@+id/textViewValorDespesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor: "
+            android:textSize="14sp" />
+
+        <!-- Data de vencimento da despesa -->
+        <TextView
+            android:id="@+id/textViewDataVencimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data de Vencimento: "
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
