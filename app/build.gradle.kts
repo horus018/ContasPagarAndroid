@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.contaspagarlucasrubira"
+    namespace = "com.example.contaspagarandroid"
     compileSdk = 34
 
     defaultConfig {
